@@ -132,7 +132,7 @@ function! s:resize_to_golden_ratio()
   let l:ah = s:golden_ratio_height()
   let l:bh = l:ah / 1.618
 
-  let l:aw = s:golden_ratio_width()
+  let l:aw = max([float2nr(s:golden_ratio_width()), 86])
   let l:bw = l:aw / 1.618
 
   let l:parallel_windows = s:find_parallel_windows(winnr())
